@@ -2,19 +2,55 @@
 <html lang="th">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Cutting & Sewing Tracking</title>
 
-  <!-- iOS Apple Touch Icon -->
+  <!-- iOS Apple Touch Icon (บังคับระบุคุณสมบัติเต็มรูปแบบ) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/tPZ7PB9F/a3a0b586-fc8c-437a-8284-7517784e2cbc.png">
   <link rel="apple-touch-icon" href="https://i.ibb.co/tPZ7PB9F/a3a0b586-fc8c-437a-8284-7517784e2cbc.png">
   <link rel="apple-touch-icon-precomposed" href="https://i.ibb.co/tPZ7PB9F/a3a0b586-fc8c-437a-8284-7517784e2cbc.png">
   <link rel="icon" type="image/png" href="https://i.ibb.co/tPZ7PB9F/a3a0b586-fc8c-437a-8284-7517784e2cbc.png">
 
-  <script>
-    // เปลี่ยนเป็น URL ของ Google Apps Script (ตัวที่ลงท้ายด้วย /exec)
-    window.location.href = "https://script.google.com/macros/s/AKfycbwo-dyokh3OJSLTygyvFNUujve_ItVNzAij4-ViPpiARLFbO3-IqF4HNotI2nIwbKKI/exec";
-  </script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f8fafc;
+      color: #334155;
+    }
+    .loader {
+      text-align: center;
+    }
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #2563eb;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
+  <div class="loader">
+    <div class="spinner"></div>
+    <p>กำลังเข้าสู่ระบบ Cutting & Sewing Tracking...</p>
+  </div>
+
+  <script>
+    // หน่วงเวลา 300ms เพื่อบังคับให้ Safari เรนเดอร์หน้า DOM และบันทึก Apple Touch Icon ก่อนเปลี่ยนหน้า
+    setTimeout(function() {
+      window.location.replace("https://script.google.com/macros/s/AKfycbwo-dyokh3OJSLTygyvFNUujve_ItVNzAij4-ViPpiARLFbO3-IqF4HNotI2nIwbKKI/exec");
+    }, 300);
+  </script>
 </body>
 </html>
